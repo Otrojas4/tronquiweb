@@ -5,4 +5,215 @@
  */
 body {
   padding-top: 56px;
+  
 }
+
+ .jumbotron
+        {
+         width:550px;
+          font-size: 50px;
+          margin-left: auto;
+        margin-right: auto;
+        }
+
+@media screen and (max-width: 1300px){ 
+.barra{
+	
+	 width:60px;
+	 display:flex;
+	 justify-content: space-evenly;
+	  
+}
+
+.barra form input,
+    .barra form button {
+         width:25px;
+          height:25px;
+          font-size: 5px;
+    }
+
+.navbar-brand{
+       width:70px;
+       font-size:8px;
+        }
+        
+      .navbar-toggler{
+    width:50px;
+      font-size:5px;
+        }
+        
+        
+        
+
+}
+
+
+
+
+
+
+
+
+
+
+.navbar-brand{
+       float:left;
+        }
+        .barra{
+     float:left;
+        }
+        .navbar-toggler{
+    float:left;
+        }
+        .navbar-collapse{
+       float:left;
+        }
+
+        
+        
+    
+
+
+
+
+        
+        
+   /*    
+@media screen and (max-width: 768px) {
+
+    .agrupa form {
+        display: flex; /* Colocar el formulario en una columna en pantallas pequeñas */
+  /*  }*/
+	 /* 
+    .agrupa form input,
+    .agrupa form button {
+         width:60px;
+          height:30px;
+          font-size: 8px;
+    }
+	.navbar-brand{
+        width:65px;
+           height:30px;
+      	font-size: 10px;
+        
+        }
+           .navbar-toggler{
+          width:50px;
+        height:20px;
+           font-size: 5px;
+        }
+        .jumbotron
+        {
+         width:550px;
+          font-size: 50px;
+        }
+
+    .collapse.navbar-collapse ul {
+        flex-direction: column; /* Colocar los elementos del menú en una columna en pantallas pequeñas */
+   /* }
+/*
+    .collapse.navbar-collapse li {
+        padding: 5px; /* Reducir el espacio entre los elementos del menú en pantallas pequeñas */
+   /* }
+}
+
+*/
+
+
+/*
+@media screen and (max-width: 668px) {
+
+    .agrupa form {
+        display: flex; /* Colocar el formulario en una columna en pantallas pequeñas */
+  /*  }
+	
+    .agrupa form input,
+    .agrupa form button {
+         width:40px;
+          height:10px;
+          font-size: 3px;
+    }
+	.navbar-brand{
+        width:45px;
+           height:10px;
+      	font-size: 5px;
+        
+        }
+           .navbar-toggler{
+          width:30px;
+        height:5px;
+           font-size: 3px;
+        }
+        .jumbotron
+        {
+         width:350px;
+          font-size: 30px;
+        }
+
+    .collapse.navbar-collapse ul {
+        flex-direction: column; /* Colocar los elementos del menú en una columna en pantallas pequeñas */
+    /*}
+
+    .collapse.navbar-collapse li {
+        padding: 3px; /* Reducir el espacio entre los elementos del menú en pantallas pequeñas */
+   /* }
+}*/
+        /*
+        
+        
+        
+        
+
+@media screen and (max-width:959px) {
+	
+	
+	  .esti{
+      width: 500px;
+           height: 100px;
+         }
+        
+        .py-5{
+        width:100%;
+   
+        }
+     
+         .navbar
+         {
+           width:100%;
+            height:60px;
+         }
+        .navbar-brand{
+        width:65px;
+      	font-size: 10px;
+        
+        }
+        .mr-sm-2{
+          width:65px;
+          font-size: 10px;
+        }
+        .btn-outline-success{
+          width:60px;
+          font-size: 10px;
+  
+        }
+        .navbar-toggler{
+          width:10px;
+        height:20px;
+           font-size: 5px;
+        }
+        .jumbotron
+        {
+         width:550px;
+          font-size: 50px;
+        }
+        #navbarResponsive{
+        width:70px;
+        height: 70px;
+        
+        
+        }
+        
+    }*/
+    
+    
+    

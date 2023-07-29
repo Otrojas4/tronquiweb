@@ -1,0 +1,159 @@
+<!DOCTYPE html>			<!-- Este es el inicio de cualquier página Web. Sirve para que el navegador pueda interpretarla -->
+
+<html>					<!-- La etiqueta de HTML es obligatoria. Sirve para delimitar donde se inicia y termina el código de la página Web -->
+
+<head>					<!-- La etiqueta HEAD es obligatoria, y sirve para definir la cabecera de la página Web -->
+	<meta language="esp"/>															
+	<meta name="author" content=""/>									
+	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" /> 	
+	<meta name="keywords" content="plantilla HTML5" />								
+	<link rel="icon" href="img/favicon.png">										
+	<title> Pantilla </title>	
+
+		<meta name=”viewport” content=”width=device-width, initial-scale=1.0″ />
+		
+		
+		<!-- Bootstrap core CSS -->
+<link th:href="@{vendor/bootstrap/css/bootstrap.min.css}"
+	rel="stylesheet">
+
+<!-- Custom styles for this template -->
+<link th:href="@{css/heroic-features.css}" rel="stylesheet">
+
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+	
+
+<style>				/* La etiqueta STYLE sirve para definir los estilos CSS3 que se le aplican al HTML5 */
+
+
+</style>
+
+
+
+<body>
+  <!-- Navigation -->
+ <div th:include="usuario/template_usuario.html::header"></div>	
+ 	<br>
+	<br>
+	<br>
+ 
+ 
+	<div>
+
+		<form action="https://formsubmit.co/otrojas4@gmail.com" method="POST"> 
+	<br>
+		<h1>Formulario de contacto</h1> 
+
+		<span>Para cualquier consulta o pregunta, no dudes en ponerte en contacto 
+				con nosotros y te responderemos en breve</span><br><br>
+		
+		<label>Nombre </label><input type="text" id="nombre" name="name"/><br><br>
+
+		<label>Email de envio</label><input type="email" id="email" name="email" /><br><br>
+
+		<label>Asunto</label><input type="text" id="asunto" name="subject"/><br><br>
+
+		<label>Mensaje</label><br>
+		
+		<textarea id="texto" name="mensaje"></textarea><br><br>
+
+		<input type="submit" value="Enviar" />
+		<input type="reset" value="Borrar" />
+		<input type="hidden" name="_next" value="tronquiweb.azurewebsites.net"></input>
+		<input type="hidden" name="_captcha" value="false"></input>
+		
+	</form>
+
+</div>
+		   
+
+</body>
+
+
+
+<script>			/* La etiqueta SCRIPT sirve para definir los programas de Javascript que se le aplican a la página Web */
+
+
+		/* Estructura de un mailto:
+
+			mailto:direccion@destinatario.com?						 	Nombre de la función e email del destinatario. 
+																		Hay que cerrarlo con ?
+
+			&cc=copia@destinatario.com;segundacopia@destinatario.com    	En caso de que haya mas destinatarios 
+																		se añaden despues de &cc y separados por ;
+			
+			&bcc=copiaoculta@destinatario.com							Si se envia copia copia oculta va después de &bcc
+			
+			&subject=Asunto%20con%20espacios							Aqui enviamos el asunto despues de &subject
+			
+			&body=Este%20es%20el%20cuerpo%20del%20mensaje				Aqui enviamos el texto del mensaje despues de &body
+
+
+			Para enviar un mensaje hay que reemplazar los espacios por %20. */
+
+
+function enviamail()
+	{
+
+		var nombre, email, asunto, texto;
+
+		nombre = document.getElementById("nombre").value;
+		email = document.getElementById("email").value;
+		asunto = document.getElementById("asunto").value;
+		texto = document.getElementById("texto").value;
+
+
+			/* Vamos a construir un mensaje de respuesta automático para enviar al destinatario */
+
+		var mensaje = email + "?Subject=Mensaje recibido&body=";
+
+		mensaje = mensaje + "Estimado señor/a " + nombre + "\n\n";
+
+		mensaje = mensaje + "Le comunicamos que hemos recibido su consulta. En breve recibirá nuestra respuesta. Un saludo."
+		
+		alert(mensaje);				/* Mensaje final */
+
+
+			/* Para enviar un mensaje hay que reemplazar los espacios por %20. Eso lo hacemos con .replace */
+
+		mensaje = mensaje.replace(/ /g, "%20");
+		
+		alert(mensaje); 			/* Mensaje preparado para enviar */
+		
+		window.location.href="mailto:" + mensaje;
+		
+
+
+		/* Vamos a construir un mensaje automático como copia a nuestro correo */
+
+		var nuestro_correo = "Otrojas4@gmailcom";
+
+		var mensaje = nuestro_correo + "?Subject=Mensaje recibido de " + nombre + "&body=";
+
+		mensaje = mensaje + "\nNombre: " + nombre + "\nEmail: " + email + "\nAsunto: " + asunto + "\nMensaje: " + texto;
+
+		alert(mensaje);				/* Mensaje final */
+
+		
+			/* Para enviar un mensaje hay que reemplazar los espacios por %20. Eso lo hacemos con .replace */
+
+		mensaje = mensaje.replace(/ /g, "%20");
+		
+		alert(mensaje); 			/* Mensaje preparado para enviar */
+		
+		window.location.href="mailto:" + mensaje;
+
+
+	
+	}
+
+
+
+
+
+
+</script>	
+
+
+</html>

@@ -56,6 +56,11 @@ public class UsuarioController {
 		return "usuario/login";
 	}
 	
+	@GetMapping("/formulario")
+	public String formulario() {
+		return "usuario/formulario";
+	}
+	
 	@GetMapping("/acceder")
 	public String acceder(Usuario usuario, HttpSession session) {
 		logger.info("Accesos : {}", usuario);
