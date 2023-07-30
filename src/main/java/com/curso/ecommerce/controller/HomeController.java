@@ -147,7 +147,7 @@ public class HomeController {
 		
 		//sesion
 		model.addAttribute("sesion", session.getAttribute("idusuario"));
-		return "/usuario/carrito";
+		return "usuario/carrito";
 	}
 	
 	@GetMapping("/order")
